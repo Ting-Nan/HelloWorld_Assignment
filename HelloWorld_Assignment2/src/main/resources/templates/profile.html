@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>HelloWorld</title>
 </head>
 <body>
 	<div class="profile">
-        <img th:src="${user.photoUrl}" alt="User Photo">
-        <h1 th:text="${user.username}">Ting-Nan Hsia</h1>
-        <p th:text="${user.bio}">Hi, my name is Ting-Nan Hsia an I am studying in Douglas College. My program is CSIS. Nice to meet you.</p>
+        <img th:src="${user.photoUrl}" alt="User Photo" style="width: 300px;">
+        <h3 th:text="${user.username}"></h3>
+        <p th:text="${user.bio}"></p>
     </div>
 
 </body>
