@@ -1,39 +1,24 @@
 package com.csis3275.Controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import com.csis3275.model.*;
+
+@Controller
 public class Controller_ths_01 {
-	private String username;
-    private String bio;
-    private String photoUrl;
-    
-    public Controller_ths_01() {
-    	
+	@GetMapping("/profile")
+    public String userProfile(Model model) {
+		TingNan_HelloWorld user = new TingNan_HelloWorld();
+        user.setUsername("Your Username");
+        user.setBio("This is your personalized bio.");
+        user.setPhotoUrl("/images/your_photo.jpg");
+
+        model.addAttribute("user", user);
+        return "profile";
     }
-    
-	public Controller_ths_01(String username, String bio, String photoUrl) {
-		super();
-		this.username = username;
-		this.bio = bio;
-		this.photoUrl = photoUrl;
-	}
 	
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	public String getBio() {
-		return bio;
-	}
-	public void setBio(String bio) {
-		this.bio = bio;
-	}
-	public String getPhotoUrl() {
-		return photoUrl;
-	}
-	public void setPhotoUrl(String photoUrl) {
-		this.photoUrl = photoUrl;
-	}
+	
     
     
 
