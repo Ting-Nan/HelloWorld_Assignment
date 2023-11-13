@@ -18,6 +18,17 @@ public class Controller_ths_01 {
         return "profile";
     }
 	
+	@GetMapping("/profile")
+	public String userProfile2(Model model) {
+		ThanhHung_HelloWorld user2 = new ThanhHung_HelloWorld();
+		user2.setUsername("Thanh Hung, Do");
+		user2.setBio("Hola, I'm Thanh Hung but you can call me Ben. I would like to learn more about computer science like everyone here. It is my pleasure to be in HelloWorld group to introduce you upcomming project we are building.");
+		user2.setPhotoUrl("/image/picture_ths_02.jpg");
+		
+		model.addAttribute("user2", user2);
+		return "profile2";
+	}
+	
 	
     
     
