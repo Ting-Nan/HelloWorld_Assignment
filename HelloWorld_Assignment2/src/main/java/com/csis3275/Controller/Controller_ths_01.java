@@ -26,7 +26,7 @@ public class Controller_ths_01 {
 		user2.setPhotoUrl("/image/picture_ths_02.jpg");
 		
 		model.addAttribute("user2", user2);
-		return "profile2";
+		return "profile";
 	}
 	
 	
