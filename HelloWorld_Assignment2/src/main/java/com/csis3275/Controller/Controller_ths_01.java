@@ -18,7 +18,7 @@ public class Controller_ths_01 {
         return "profile";
     }
 	
-	@GetMapping("/profile")
+	@GetMapping("/profile2")
 	public String userProfile2(Model model) {
 		ThanhHung_HelloWorld user2 = new ThanhHung_HelloWorld();
 		user2.setUsername("Thanh Hung, Do");
